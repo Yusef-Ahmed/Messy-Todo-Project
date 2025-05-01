@@ -1,0 +1,98 @@
+body {
+  font-family: "roboto mono", sans-serif;
+  background-color: #121212;
+  color: aliceblue;
+  padding: 50px;
+  margin: 0;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+.title {
+  text-align: center;
+  font-weight: 800;
+  font-size: 60px;
+  letter-spacing: 10px;
+  margin: 0;
+}
+
+input {
+  padding: 12px;
+  padding-right: 50px;
+  border-radius: 20px;
+  font-size: 15px;
+  font-weight: 500;
+  border: 0;
+}
+
+button {
+  padding: 15px;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 20px;
+  background-color: purple;
+  color: aliceblue;
+  font-family: "roboto mono", sans-serif;
+  border: 0;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.addButton {
+  margin-left: -60px;
+}
+
+#taskList {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.task {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid aliceblue;
+  border-radius: 15px;
+  padding: 20px;
+  width: 40%;
+  text-align: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.taskButtons {
+  display: flex;
+  justify-content: space-around;
+}
+
+.emptyMessage {
+  color: gray;
+  font-weight: 400;
+  font-size: 30px;
+}
+
+.taskDone {
+  text-decoration: line-through;
+  color: gray;
+}
+
+@media (min-width: 1024px) {
+  .task {
+    width: 25%;
+  }
+}
+
+@media (min-width: 1440px) {
+  .task {
+    width: 20%;
+  }
+}

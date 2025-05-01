@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Messy ToDo</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..800;1,100..800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <header>
+      <h1 class="title">Todo List</h1>
+      <div>
+        <input id="taskInput" type="text" placeholder="Add a task" />
+        <button class="addButton" onclick="addTask()">Add Task</button>
+      </div>
+    </header>
+    
+    <div id="taskList"></div>
+    
+    <!-- JavaScript file -->
+    <script src="script.js"></script>
+  </body>
+</html>
