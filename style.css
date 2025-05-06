@@ -69,6 +69,12 @@ button:hover {
   gap: 20px;
 }
 
+.taskNumber {
+  position: absolute;
+  opacity: 60%;
+  margin: 0;
+}
+
 .taskButtons {
   display: flex;
   justify-content: space-around;

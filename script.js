@@ -44,10 +44,11 @@ const renderTasks = () => {
     const div = document.createElement("div");
     div.className = "task";
     div.innerHTML = `<h2 class="taskName">${task.name}</h2>
-         <div class="taskButtons">
-           <button onclick="toggle(${index})">Toggle</button>
-           <button onclick="deleteTask(${index})">Delete</button>
-         </div>`;
+                     <p class="taskNumber">${index + 1}</p>
+                     <div class="taskButtons">
+                       <button onclick="toggle(${index})">${task.done ? "Undo" : "Toggle"}</button>
+                       <button onclick="deleteTask(${index})">Delete</button>
+                     </div>`;
 
     if (task.done) {
       const taskName = div.querySelector(".taskName");
