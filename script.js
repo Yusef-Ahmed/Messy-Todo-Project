@@ -1,4 +1,4 @@
-const data = [];
+const data = JSON.parse(localStorage.getItem("tasks")) || [];
 
 // Handle add tasks with enter button
 document.getElementById("taskInput").addEventListener("keypress", (event) => {
@@ -27,6 +27,9 @@ const addTask = () => {
 const renderTasks = () => {
   const container = document.getElementById("taskList");
   container.innerHTML = "";
+  
+  // Store the tasks in local storage
+  localStorage.setItem("tasks", JSON.stringify(data));
 
   if (!data.length) {
     // Display a message if no tasks are available
@@ -46,7 +49,7 @@ const renderTasks = () => {
            <button onclick="deleteTask(${index})">Delete</button>
          </div>`;
 
-    if (task.done) { // do
+    if (task.done) {
       const taskName = div.querySelector(".taskName");
       taskName.classList.add("taskDone");
     }
